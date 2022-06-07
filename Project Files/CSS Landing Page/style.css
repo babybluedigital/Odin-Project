@@ -19,11 +19,12 @@ h2 {
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 34px;
     color: #1f2937;
     font-weight: 300;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
 h4 {
@@ -31,6 +32,7 @@ h4 {
     color: #f9faf8;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
 }
 
 h5 {
@@ -41,10 +43,12 @@ h5 {
 }
 
 h6 {
-    font-size: 18px;
-    color: #1f2937;
-    font-weight: 300;
+    font-size: 34px;
+    color: #000;
+    font-weight: 900;
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    text-align: end;
 }
 
 p {
@@ -52,6 +56,8 @@ p {
     color: #f9faf8;
     font-weight: 100;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin: 0px;
 }
 
 a {
@@ -63,7 +69,7 @@ a {
 
 img {
     max-width: 1200px;
-    max-height: 350px;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
@@ -73,14 +79,14 @@ img {
 
 .primary-button {
     background-color: #3882f6;
-    border: 1px solid #3882f6;
+    border: 3px solid #3882f6;
     border-radius: 10px;
     padding: 10px 50px;
 }
 
 .primary-button:hover {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     border-radius: 10px;
     padding: 10px 50px;
     color: #fff;
@@ -89,18 +95,20 @@ img {
 
 .secondary-button {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     border-radius: 10px;
     padding: 10px 50px;
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .secondary-button:hover {
-    background-color: #3882f6;
-    border: 1px solid #3882f6;
+    background-color: #fff;
+    border: 3px solid #fff;
     border-radius: 10px;
     padding: 10px 50px;
+    color: #3882f6;
 }
 
 nav {
@@ -140,7 +148,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 10%;
+    padding: 5% 10%;
     column-gap: 70px;
     flex-wrap: wrap;
     row-gap: 40px;
@@ -158,7 +166,7 @@ nav {
 
 .section-white {
     background-color: #fff;
-    padding: 10%;
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -196,13 +204,16 @@ nav {
 }
 
 .section-white-div-inner span {
-    flex: 0 25%;
-    max-width: 20%;
+    flex: 0 200px;
+    width: 20%;
+    row-gap: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-grey {
     background-color: #e5e7eb;
-    padding: 0px 10%;
+    padding: 5% 20%;
 }
 
 div {
@@ -222,4 +233,70 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.section-white-block {
+    background: #3882f6;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 60px 40px;
+    max-width: 1420px;
+    row-gap: 40px;
+    margin: 10px;
+}
+
+.section-white-block span {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding: 10%;
+    }
+    
+    .nav-header-items {
+        display: none;
+    }
+    
+    .section-blue-div {
+        align-items: center;
+        
+    }
+    
+    .section-blue{
+        padding: 5% 5% 20% 5%;
+    }
+    
+    .section-grey {
+        padding: 10%;
+    }
+    
+    .section-white {
+        margin: 30px;
+        padding: 5%;
+    }
+    
+    h1, h2, h3, h4, h5, h6, p {
+        text-align: center;
+    }
+    
+    .section-white-block {
+        padding: 30px;
+    }
+    
+    img {
+        max-height: 200px;
+    }
+    
 }
